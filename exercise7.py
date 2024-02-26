@@ -1,25 +1,34 @@
 
 def printPat(n):
-    #for each line
-    for i in range(n):
-        #in first line, as long as n<0 print n times the n, then n-1 times (n-1)
-        while n>0:
-            repeat=n
-            while repeat > 0:
-                #print n "repeat" times
-                for j in range(repeat):
-                    print(repeat, end=" ")
-                repeat -= 1
-                n -= 1
+    for i in range(n, 0, -1):
+        #for i in range
+        oneline(i)
 
 
-    #i need a line for each number
-    #each number should appear as many times as the number on the first line
-    # then second line one time less etc
-    
-n=3
+def oneline(n):
+    for i in range(n, 0, -1):
+        for j in range(n):
+            print(i, end=" ")
+    print()
+
+
+n=4
 printPat(n)
+#somehow decrease the number oneline gets by one each time the printPat function sends to it.
 
+#oneline(n)
+#i need a function for each line.
+
+'''
+while n>0:
+    repeat=n
+    while repeat > 0:
+        #print n "repeat" times
+        for j in range(repeat):
+            print(repeat, end=" ")
+        repeat -= 1
+        n -= 1
+'''
 
 """
 You are given a number N. You need to print the pattern for the given value of N.
