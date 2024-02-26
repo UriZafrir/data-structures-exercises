@@ -1,0 +1,78 @@
+Certainly! Here are a couple of data structure exercises in rising order of complexity for beginners in Python:
+
+### Exercise 1: Lists and Iteration
+
+#### Problem:
+Write a Python function that takes a list of numbers as input and returns the sum of all even numbers in the list.
+
+#### Example:
+```python
+def sum_of_evens(numbers):
+    # Your code here
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+result = sum_of_evens(numbers)
+print(result)  # Output: 30
+```
+
+### Exercise 2: Lists and Sorting
+
+#### Problem:
+Write a Python function that takes a list of integers as input and returns a new list with the elements sorted in non-decreasing order.
+
+#### Example:
+```python
+def sort_numbers(numbers):
+    # Your code here
+
+numbers = [5, 2, 9, 1, 5, 6]
+result = sort_numbers(numbers)
+print(result)  # Output: [1, 2, 5, 5, 6, 9]
+```
+
+### Exercise 3: Lists and Searching
+
+#### Problem:
+Write a Python function that takes a list of integers and a target value as input. The function should return `True` if the target value is present in the list and `False` otherwise.
+
+#### Example:
+```python
+def search_value(numbers, target):
+    # Your code here
+
+numbers = [3, 7, 1, 9, 4, 2]
+target_value = 4
+result = search_value(numbers, target_value)
+print(result)  # Output: True
+```
+
+### Exercise 4: Dictionaries and Counting
+
+#### Problem:
+Write a Python function that takes a string as input and returns a dictionary containing the count of each character in the string.
+
+#### Example:
+```python
+def count_characters(input_string):
+    # Your code here
+
+text = "pythonprogramming"
+result = count_characters(text)
+print(result)  # Output: {'p': 2, 'y': 1, 't': 1, 'h': 1, 'o': 1, 'n': 1, 'r': 2, 'a': 1, 'm': 2, 'i': 1, 'g': 2}
+```
+
+### Exercise 5: Lists and Recursion
+
+#### Problem:
+Write a Python function that takes a positive integer `n` as input and returns the nth Fibonacci number using recursion.
+
+#### Example:
+```python
+def fibonacci(n):
+    # Your code here
+
+result = fibonacci(5)
+print(result)  # Output: 5 (Fibonacci sequence: 0, 1, 1, 2, 3, 5, ...)
+```
+
+These exercises cover a range of topics, including basic list operations, sorting, searching, dictionary manipulation, and recursion. They are designed to help beginners build a solid understanding of fundamental data structures and algorithms in Python.
