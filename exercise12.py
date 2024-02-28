@@ -1,8 +1,12 @@
 
-class Solution:
 
-	def _sum(self, arr, n):
-   		return
+class Solution:
+    def _sum(self, arr, n):
+        total_sum = 0
+        for i in range(len(arr)):
+            total_sum+=arr[i]
+            pass
+        return total_sum
 
 
 
@@ -11,7 +15,7 @@ class Solution:
 solution=Solution()
 arr=[1, 2, 3, 4]
 n=len(arr)
-solution._sum(arr, n)
+print(solution._sum(arr, n))
 
 
 '''
