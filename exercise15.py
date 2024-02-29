@@ -1,38 +1,40 @@
 
 
 class Solution:    
-    #Function to return the count of number of elements in union of two arrays.
-    def doUnion(self,a,n,b,m):
-        '''
-        if element is in a and not in b then add to result, if element is in both a and b add to result, if element is in b and not in a then add to result
-        otherwise, add all elements to array, then check for duplicates.
-        connect a+b, its 1,2,3,4,5,5,3
-        for first element i=0, for each element of array except i=j check if result[i]==result(j), if yes remove result(j) and update len(result)
-        '''
-        result=a+b
-        result_range=range(len(result))
-        for i in range(len(result)):
-            if i>result_range[-1]:
-                break
-            for j in range(len(result)):
-                if j>result_range[-1]:
-                    break
-                #print(result[i],result[j])
-                if j==i:
-                    continue
-                if result[j]==result[i]:
-                    result.pop(j)
-                    result_range=range(len(result))
-        return len(result)
+    def doUnion(self,a, n, b, m):
+        # Using a set to store distinct elements
+        union_set = set()
+
+        # Adding elements from array 'a' to the set
+        for i in range(n):
+            union_set.add(a[i])
+
+        # Adding elements from array 'b' to the set
+        for i in range(m):
+            union_set.add(b[i])
+
+        # Returning the count of distinct elements in the union set
+        return len(union_set)
 
 
+s=Solution()
+# Example usage:
+a1 = [1, 2, 3, 4, 5]
+b1 = [1, 2, 3]
+print(s.doUnion(a1, 5, b1, 3))  # Output: 5
+
+a2 = [85, 25, 1, 32, 54, 6]
+b2 = [85, 2]
+print(s.doUnion(a2, 6, b2, 2))  # Output: 7
+
+'''
 a=[5,3,60,50]
 b=[1,2,3,4,5,6,13,22,25]
 n=len(a)
 m=len(b)
 s=Solution()
-
 print(s.doUnion(a,n,b,n))
+'''
 '''
         result=a+b
         result_range=range(len(result))
