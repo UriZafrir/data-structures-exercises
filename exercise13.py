@@ -1,54 +1,25 @@
 
 class Solution:	
     def binarysearch(self, arr, n, k):
-        '''what happens to the index when i cut the array? for array of n=3, cutting down (elements are 1 and 2), index stays the same. cutting up, index is pushed to 2 that means to (n/2)+1
-        
-        explanation for {1 2 3 4 5} - take middle element arr[n//2], is arr[n/2]<k ? if yes, then arr=arr[n/2+1, n], n=len(arr). else arr=arr[0,n/2], n=les(arr).
-        take array which is arr=[4,5]. since it's even, take element in n/2
-        if n=2, if arr[0]=k then return(original_array.index(k)), else return
-        if array is odd and different than 1(for example n=3 (0,1,2)), take middle element (n/2), if that elements is smaller than k then arr=arr[n/2,n], n=len(arr). if array is 1 then k=
-        if array is even (for example n=4(0,1,2,3)), if arr[(n/2)-1]<k then index+=n/2, arr=arr[n/2,n], n=len(arr), else arr=arr[0,(n/2)-1], n=len(arr)
         '''
-        index=0
-        if k>arr[-1] or k<arr[0]:
-            return -1
-        while len(arr)>2:
-            #odd
-            if len(arr)%2==1 and len(arr)!=2:
-                if arr[(n//2)]<k:
-                    index+=(n//2)+1
-                    arr=arr[(n//2)+1:n]
-                    n=len(arr)
-                else:
-                    arr=arr[0:n//2+1]
-                    n=len(arr)
-            #even
-            if len(arr)%2==0 and len(arr)!=2:
-                if arr[(n//2)-1]<k:
-                    index+=n//2
-                    arr=arr[n//2:n]
-                    n=len(arr)
-                else: 
-                    arr=arr[0:(n//2)]
-                    n=len(arr)
-        if len(arr)==2:
-            if arr[0]==k:
-                return(index)
-            elif arr[1]==k:
-                return(index+1)
-            else:
-                return -1
-        elif len(arr)==1:
-            if arr[0]==k:
-                return(index)
-            else:
-                return -1
-
+        if array has 4 elements, n=4, mid=1, if k is bigger than mid 
+        '''
+        start=0
+        end=n-1
+        while start<=end:
+            mid=(start+end)//2
+            if arr[mid]==k:
+                return mid
+            elif arr[mid]<k:
+                start=mid+1
+            elif arr[mid]>k:
+                end=mid-1
+        return -1
 
 
 arr=[1, 2, 3, 4, 5, 6, 8, 9,10,20,30,40,50,60]
 n=len(arr)
-k=7
+k=8
 s=Solution()
 
 print(s.binarysearch(arr,n,k))
