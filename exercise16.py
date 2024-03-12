@@ -6,25 +6,25 @@ class Solution:
         #if even, for each 
         chat_list = list(s)
         n=len(chat_list)
-        print(chat_list)
+        #print(chat_list)
         if n%2==0:
-            for i in range(int((n/2)-1)):
+            for i in range(int((n/2))):
                 chat_list[i], chat_list[n-i-1] = chat_list[n-i-1], chat_list[i]
-                print(chat_list)
+                #print(chat_list)
         if n%2==1:
             for i in range((n//2)):
                 chat_list[i], chat_list[n-i-1] = chat_list[n-i-1], chat_list[i]
-                print(chat_list)
+                #print(chat_list)
         s = ''.join(chat_list)
         return s
 
 
 
-s="abcdefgh"
+s="Geeksa"
 #print(len(s))
 solution=Solution()
-solution.reverseWord(s)
-print(s)
+print(solution.reverseWord(s))
+#print(s)
 #print (int((8/2)))
 
 
